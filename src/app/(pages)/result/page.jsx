@@ -1,5 +1,5 @@
 "use client";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const { default: Image } = require("next/image");
@@ -7,6 +7,8 @@ const { default: Image } = require("next/image");
 const Result = () => {
   const [isLoading, setLoading] = useState(true);
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const search = searchParams.get("searchQuery");
 
   useEffect(() => {
     setTimeout(() => {
@@ -23,13 +25,14 @@ const Result = () => {
       )}
       {!isLoading && (
         <div className="h-[100vh] bg-[#201637]">
-          <div className="flex flex-col	 items-center justify-center top-[20%] relative">
+          <div className="flex flex-col	 items-center justify-center top-[10%] relative">
             <h1 className="text-[24px] mb-[50px] text-center">
-              This is your AI Generated Image
+              This is your AI Generated Image for prompt: <br />
+              {search}
             </h1>
             <Image
               className="rounded"
-              src="/result.jpg"
+              src="/result.webp"
               alt="result image"
               height={400}
               width={400}

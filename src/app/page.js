@@ -2,8 +2,10 @@
 import Header from "@/components/Header";
 import MagicButton from "@/components/MagicButton";
 import SearchBar from "@/components/SearchBar";
+import { useState } from "react";
 
 export default function Home() {
+  const [searchQuery, setSearchQuery] = useState("");
   return (
     <>
       <div className="w-full flex justify-center mb-5">
@@ -28,9 +30,12 @@ export default function Home() {
           <br className="md:hidden" />
           Generator
         </h1>
-        <SearchBar />
+        <SearchBar setSearchQuery={setSearchQuery} />
         <div className="w-full flex justify-center">
-          <MagicButton />
+          <MagicButton
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
+          />
         </div>
       </div>
     </>

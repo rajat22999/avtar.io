@@ -1,12 +1,14 @@
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-const MagicButton = () => {
+const MagicButton = ({ searchQuery }) => {
   const router = useRouter();
   return (
     <button
       onClick={() => {
-        router.push("/result");
+        if (searchQuery?.length > 0) {
+          router.push(`/result?searchQuery=${searchQuery}`);
+        }
       }}
       className="create-magic-btn mt-6 cursor-pointer"
     >

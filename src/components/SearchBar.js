@@ -1,6 +1,12 @@
-const SearchBar = () => {
+const SearchBar = ({ setSearchQuery }) => {
   return (
-    <input className="searchbar w-full" placeholder="Type your prompt here" />
+    <input
+      onChange={(val) => {
+        setSearchQuery(val.target.value);
+      }}
+      className="searchbar w-full"
+      placeholder="Type your prompt here"
+    />
   );
 };
 

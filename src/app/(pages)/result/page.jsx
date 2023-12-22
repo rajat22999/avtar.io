@@ -41,7 +41,7 @@ const Result = () => {
               onClick={() => {
                 router.push("/");
               }}
-              className="mt-[50px] cursor-pointer"
+              className="my-[50px] cursor-pointer"
             >
               Back
             </button>

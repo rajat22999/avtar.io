@@ -12,7 +12,7 @@ export default function Home() {
         <Header />
       </div>
       <div
-        className="px-5"
+        className="px-5 pb-[60px]"
         style={{
           width: "100%",
           margin: "30% 0px",
@@ -20,7 +20,7 @@ export default function Home() {
           margin: "auto",
           position: "absolute",
           left: "50%",
-          transform: "translate(-50%, 30%)",
+          transform: "translate(-50%, 20%)",
         }}
       >
         <h1 className="main-text mb-8">

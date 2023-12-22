@@ -14,7 +14,7 @@ export default function Home() {
         style={{
           width: "100%",
           margin: "30% 0px",
-          maxWidth: "400px",
+          maxWidth: "550px",
           margin: "auto",
           position: "absolute",
           left: "50%",
@@ -22,10 +22,10 @@ export default function Home() {
         }}
       >
         <h1 className="main-text mb-8">
-          AI
-          <br />
-          Image
-          <br />
+          AI &nbsp;
+          <br className="md:hidden" />
+          Image &nbsp;
+          <br className="md:hidden" />
           Generator
         </h1>
         <SearchBar />

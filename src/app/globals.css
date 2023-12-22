@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: #fff;
+  font-family: "Quicksand", sans-serif;
+  background-image: url(/dog-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header {
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  padding: 6px 15px 6px 13px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 15px 0px rgba(255, 255, 255, 0.08) inset;
+  backdrop-filter: blur(10px);
+
+  margin-top: 42px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.header p {
+  background: linear-gradient(
+    90deg,
+    #eba552 0%,
+    rgba(128, 189, 245, 0.97) 22.91%,
+    rgba(173, 70, 221, 0.57) 70.95%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Quicksand";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.main-text {
+  color: #fff;
+  font-family: "Quicksand";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.searchbar {
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.2) inset,
+    0px 4px 10px 0px rgba(80, 148, 228, 0.32);
+  backdrop-filter: blur(4px);
+
+  height: 58px;
+  padding: 19px 130px 19px 20px;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.create-magic-btn {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 26px;
+  border-radius: 40px;
+  background: linear-gradient(
+    90deg,
+    rgb(128 189 245 / 53%) 22.91%,
+    rgb(173 70 221 / 59%) 70.95%
+  );
+}

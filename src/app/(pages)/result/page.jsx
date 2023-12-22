@@ -26,7 +26,10 @@ const Result = () => {
       {!isLoading && (
         <div className="h-[100vh] bg-[#201637]">
           <div className="flex flex-col	 items-center justify-center top-[10%] relative">
-            <h1 className="text-[24px] mb-[50px] text-center">
+            <h1
+              className="text-[24px] mb-[50px] text-center"
+              style={{ wordBreak: "break-word" }}
+            >
               This is your AI Generated Image for prompt: <br />
               {search}
             </h1>
